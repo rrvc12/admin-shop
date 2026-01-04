@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "corsheaders",
     # internal apps
+    "products",
 ]
 
 MIDDLEWARE = [
@@ -155,3 +156,5 @@ MEDIA_ROOT = BASE_DIR / "media/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:8000/")
