@@ -1,8 +1,8 @@
 from rest_framework.response import Response
-from .pagination import BasePagePagination
+from .paginations import BasePagePagination
 
 
-def get_paginated_data(request, serializer, queryset, pagination_class=None):
+def get_paginated_data(request, serializer_class, queryset, pagination_class=None):
     """
     Recibe los datos serializados y devuelve la respuesta paginada
     """
@@ -15,6 +15,7 @@ def get_paginated_data(request, serializer, queryset, pagination_class=None):
 
     if paginate_queryset is not None:
         # Devuelve la respuesta paginada
+        serializer = serializer_class(paginate_queryset, many=True)
         return paginator.get_paginated_response(serializer.data)
 
     # Devuelve todos los elementos sin paginar
