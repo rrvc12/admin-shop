@@ -4,7 +4,7 @@
   >
     <div class="relative h-48 overflow-hidden group">
       <img
-        :src="product.image_url"
+        :src="product.image_url ?? ''"
         :alt="product.name"
         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
       />

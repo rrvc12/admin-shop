@@ -16,8 +16,8 @@
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="flex justify-between items-end mb-8">
       <h2 class="text-3xl font-bold text-slate-900">Productos Destacados</h2>
-      <a
-        href="#"
+      <RouterLink
+        to="/shop"
         class="text-indigo-600 font-medium hover:text-indigo-700 flex items-center gap-1 group"
       >
         Ver más
@@ -36,7 +36,7 @@
           <path d="M5 12h14" />
           <path d="m12 5 7 7-7 7" />
         </svg>
-      </a>
+      </RouterLink>
     </div>
     <div v-if="isLoading">Cargando ...</div>
     <div v-else id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

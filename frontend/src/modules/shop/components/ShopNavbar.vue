@@ -25,11 +25,15 @@
         </div>
 
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors"
-            >Inicio</a
+          <RouterLink
+            to="/"
+            class="text-slate-600 hover:text-indigo-600 font-medium transition-colors"
+            >Inicio</RouterLink
           >
-          <a href="#" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors"
-            >Tienda</a
+          <RouterLink
+            to="/shop"
+            class="text-slate-600 hover:text-indigo-600 font-medium transition-colors"
+            >Tienda</RouterLink
           >
           <a href="#" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors"
             >Contáctanos</a
